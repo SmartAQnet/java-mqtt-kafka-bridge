@@ -36,9 +36,9 @@ public class MqttMessageConverterTest {
 				"    \"symbol\": \"E\"\r\n" + 
 				"  },\r\n" + 
 				"  \"observationType\": \"F\",\r\n" + 
-				"  \"Thing@iot.navigationLink\": \"https://oliver.pw/singleID.json\",\r\n" + 
-				"  \"ObservedProperty@iot.navigationLink\": \"https://oliver.pw/singleID.json\",\r\n" + 
-				"  \"Sensor@iot.navigationLink\": \"https://oliver.pw/singleID.json\"\r\n" + 
+				"  \"Thing@iot.navigationLink\": \"http://oliver.pw/singleID.json\",\r\n" + 
+				"  \"ObservedProperty@iot.navigationLink\": \"http://oliver.pw/singleID.json\",\r\n" + 
+				"  \"Sensor@iot.navigationLink\": \"http://oliver.pw/singleID.json\"\r\n" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("Datastreams", new MqttMessage(payload));
 	}
@@ -58,11 +58,11 @@ public class MqttMessageConverterTest {
 				"  \"observedArea\": \"X1\",\r\n" + 
 				"  \"phenomenonTime\": \"X2\",\r\n" + 
 				"  \"resultTime\": \"X3\",\r\n" + 
-				"  \"Observations@iot.navigationLink\": \"https://oliver.pw/multiID.json\"," + 
+				"  \"Observations@iot.navigationLink\": \"http://oliver.pw/multiID.json\"," + 
 				"  \"observationType\": \"F\",\r\n" + 
-				"  \"Thing@iot.navigationLink\": \"https://oliver.pw/singleID.json\",\r\n" + 
-				"  \"ObservedProperty@iot.navigationLink\": \"https://oliver.pw/singleID.json\",\r\n" + 
-				"  \"Sensor@iot.navigationLink\": \"https://oliver.pw/singleID.json\"\r\n" + 
+				"  \"Thing@iot.navigationLink\": \"http://oliver.pw/singleID.json\",\r\n" + 
+				"  \"ObservedProperty@iot.navigationLink\": \"http://oliver.pw/singleID.json\",\r\n" + 
+				"  \"Sensor@iot.navigationLink\": \"http://oliver.pw/singleID.json\"\r\n" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("Datastreams", new MqttMessage(payload));
 	}
@@ -89,7 +89,7 @@ public class MqttMessageConverterTest {
 				"  \"description\": \"B\",\r\n" + 
 				"  \"encodingType\": \"C\",\r\n" + 
 				"  \"metadata\": \"D\",\r\n" + 
-				"  \"Datastreams@iot.navigationLink\": \"https://oliver.pw/multiID.json\"" + 
+				"  \"Datastreams@iot.navigationLink\": \"http://oliver.pw/multiID.json\"" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("Sensors", new MqttMessage(payload));
 	}
@@ -114,7 +114,7 @@ public class MqttMessageConverterTest {
 				"  \"name\": \"A\",\r\n" + 
 				"  \"description\": \"B\",\r\n" + 
 				"  \"definition\": \"C\",\r\n" + 
-				"  \"Datastreams@iot.navigationLink\": \"https://oliver.pw/multiID.json\"\r\n" + 
+				"  \"Datastreams@iot.navigationLink\": \"http://oliver.pw/multiID.json\"\r\n" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("ObservedProperties", new MqttMessage(payload));
 	}
@@ -127,7 +127,7 @@ public class MqttMessageConverterTest {
 				"  \"phenomenonTime\": \"A\",\r\n" + 
 				"  \"result\": \"B\",\r\n" + 
 				"  \"resultTime\": \"C\",\r\n" + 
-				"  \"Datastream@iot.navigationLink\": \"https://oliver.pw/singleID.json\"\r\n" + 
+				"  \"Datastream@iot.navigationLink\": \"http://oliver.pw/singleID.json\"\r\n" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("Observations", new MqttMessage(payload));
 	}
@@ -142,8 +142,8 @@ public class MqttMessageConverterTest {
 				"  \"resultTime\": \"C\",\r\n" + 
 				"  \"resultQuality\": \"X1\",\r\n" + 
 				"  \"validTime\": \"X2\",\r\n" + 
-				"  \"Datastream@iot.navigationLink\": \"https://oliver.pw/singleID.json\",\r\n" + 
-				"  \"FeatureOfInterest@iot.navigationLink\": \"https://oliver.pw/singleID.json\"" + 
+				"  \"Datastream@iot.navigationLink\": \"http://oliver.pw/singleID.json\",\r\n" + 
+				"  \"FeatureOfInterest@iot.navigationLink\": \"http://oliver.pw/singleID.json\"" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("Observations", new MqttMessage(payload));
 	}
@@ -172,7 +172,7 @@ public class MqttMessageConverterTest {
 				"  \"name\": \"A\",\r\n" + 
 				"  \"description\": \"B\",\r\n" + 
 				"  \"encodingType\": \"C\",\r\n" + 
-				"  \"Observations@iot.navigationLink\": \"https://oliver.pw/multiID.json\"," + 
+				"  \"Observations@iot.navigationLink\": \"http://oliver.pw/multiID.json\"," + 
 				"  \"feature\": {\r\n" + 
 				"    \"type\": \"Point\",\r\n" + 
 				"    \"coordinates\": [-13.37, 42.42]\r\n" + 
@@ -199,8 +199,8 @@ public class MqttMessageConverterTest {
 				"  \"@iot.id\": \"T1\",\r\n" + 
 				"  \"name\": \"A\",\r\n" + 
 				"  \"description\": \"B\",\r\n" + 
-				"  \"Locations@iot.navigationLink\": \"https://oliver.pw/multiID.json\"," + 
-				"  \"Datastreams@iot.navigationLink\": \"https://oliver.pw/multiID.json\"" + 
+				"  \"Locations@iot.navigationLink\": \"http://oliver.pw/multiID.json\"," + 
+				"  \"Datastreams@iot.navigationLink\": \"http://oliver.pw/multiID.json\"" + 
 				"}").getBytes();
 		conv.mqttMessageToAvro("Things", new MqttMessage(payload));
 	}
@@ -245,7 +245,7 @@ public class MqttMessageConverterTest {
 				"  \"name\": \"A\",\r\n" + 
 				"  \"description\": \"B\",\r\n" + 
 				"  \"encodingType\": \"C\",\r\n" + 
-				"  \"Things@iot.navigationLink\": \"https://oliver.pw/multiID.json\"," + 
+				"  \"Things@iot.navigationLink\": \"http://oliver.pw/multiID.json\"," + 
 				"  \"feature\": {\r\n" + 
 				"    \"type\": \"Point\",\r\n" + 
 				"    \"coordinates\": [-13.37, 42.42]\r\n" + 
